@@ -37,18 +37,6 @@ function firstQuestion(){
         $('.content-yes').show(200);
     $('.box').show(200);
       })
-      document.addEventListener('DOMContentLoaded', function() {
-        var audioElement = document.getElementById('audio');
-        var audioContainer = document.getElementById('audio-container');
-      
-        audioContainer.addEventListener('click', function() {
-          if (audioElement.paused) {
-            audioElement.play();
-          } else {
-            audioElement.pause();
-          }
-        });
-      });
 }
 
  // switch button position
@@ -195,4 +183,3 @@ var getUrlParameter = function getUrlParameter(sParam) {
         }
     }
 };
-
