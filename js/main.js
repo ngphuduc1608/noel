@@ -37,7 +37,7 @@ function firstQuestion(){
         $('.content-yes').show(200);
     $('.box').show(200);
     snowDrop(150, randomInt(1035, 1280));
-snow(150, 150);
+    snow(150, 150);
       })
 }
 
