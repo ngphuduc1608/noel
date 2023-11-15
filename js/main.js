@@ -20,7 +20,7 @@ function init(){
 function firstQuestion(){
     $('.content-yes').hide();
     $('.box').hide();
-
+    
     Swal.fire({
         title: CONFIG.introTitle,
         text: CONFIG.introDesc,
@@ -36,6 +36,8 @@ function firstQuestion(){
       .then(function(){
         $('.content-yes').show(200);
     $('.box').show(200);
+    snowDrop(150, randomInt(1035, 1280));
+snow(150, 150);
       })
 }
 
@@ -143,8 +145,8 @@ $('#yes').click(function() {
         }
     })
 })
-snowDrop(150, randomInt(1035, 1280));
-snow(150, 150);
+// snowDrop(150, randomInt(1035, 1280));
+// snow(150, 150);
 function snow(num, speed) {
 		if (num > 0) {
 			setTimeout(function () {
