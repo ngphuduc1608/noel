@@ -22,7 +22,7 @@
   #no{
     position: absolute;
     display: inline-block;
-    left: 35%; 
+    left: 25%; 
     top: 40vh;
     border-radius: 10px;
     -webkit-transition: all 0.1s ease-out;
@@ -30,7 +30,7 @@
   #yes{
     position: absolute;
     display: inline-block;
-    left: 70%; 
+    left: 60%; 
     top: 40vh;
     border-radius: 10px;
     -webkit-transition: all 0.3s ease-out;
@@ -985,7 +985,7 @@ marquee{
   #no{
     position: absolute;
     display: inline-block;
-    left: 7%; 
+    left: 5%; 
     top: 32vh;
     font-size: 14px;
     padding: 3px;
@@ -995,7 +995,7 @@ marquee{
   #yes{
     position: absolute;
     display: inline-block;
-    left: 58%; 
+    left: 50%; 
     top: 32vh;
     font-size: 14px;
     padding: 3px;
