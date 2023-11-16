@@ -26,7 +26,7 @@ function firstQuestion(){
         text: CONFIG.introDesc,
 
         // 2. Ảnh ở câu hỏi đầu tiên
-        imageUrl: 'img/avt.png',
+        imageUrl: 'img/cuteCat.jpeg',
         imageWidth: 300,
         imageHeight: 300,
         background: '#fff url("img/iput-bg.jpg")',
