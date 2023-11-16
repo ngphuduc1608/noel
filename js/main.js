@@ -36,8 +36,8 @@ function firstQuestion(){
       .then(function(){
         $('.content-yes').show(200);
     $('.box').show(200);
-    snowDrop(150, randomInt(1035, 1280));
-    snow(150, 150);
+    // snowDrop(150, randomInt(1035, 1280));
+    // snow(150, 150);
       })
 }
 
@@ -147,41 +147,121 @@ $('#yes').click(function() {
 })
 // snowDrop(150, randomInt(1035, 1280));
 // snow(150, 150);
+// function snow(num, speed) {
+// 		if (num > 0) {
+// 			setTimeout(function () {
+// 				$('#drop_' + randomInt(1, 250)).addClass('animate');
+// 				num--;
+// 				snow(num, speed);
+// 			}, speed);
+// 		}
+// 	};
+// 	function snowDrop(num, position) {
+// 		if (num > 0) {
+// 			var drop = '<div class="drop snow" id="drop_' + num + '"></div>';
+
+// 			$('body').append(drop);
+// 			$('#drop_' + num).css('left', position);
+// 			num--;
+// 			snowDrop(num, randomInt(60, 1480));
+// 		}
+// 	};
+// function randomInt(min, max) {
+// 		return Math.floor(Math.random() * (max - min + 1) + min);
+// 	};
+
+// var yes = document.getElementById('yes');
+// var getUrlParameter = function getUrlParameter(sParam) {
+//     var sPageURL = window.location.search.substring(1),
+//         sURLVariables = sPageURL.split('&'),
+//         sParameterName,
+//         i;
+ 
+//     for (i = 0; i < sURLVariables.length; i++) {
+//         sParameterName = sURLVariables[i].split('=');
+ 
+//         if (sParameterName[0] === sParam) {
+//             return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+//         }
+//     }
+// };
+
+
+
+snowDrop(150, randomInt(60, 1580));
+snow(150, 150);
+// Function to generate snowflakes
 function snow(num, speed) {
-		if (num > 0) {
-			setTimeout(function () {
-				$('#drop_' + randomInt(1, 250)).addClass('animate');
-				num--;
-				snow(num, speed);
-			}, speed);
-		}
-	};
-	function snowDrop(num, position) {
-		if (num > 0) {
-			var drop = '<div class="drop snow" id="drop_' + num + '"></div>';
+    if (num > 0) {
+        setTimeout(function () {
+            $('#drop_' + randomInt(1, 250)).addClass('animate');
+            num--;
+            snow(num, speed);
+        }, speed);
+    }
+};
 
-			$('body').append(drop);
-			$('#drop_' + num).css('left', position);
-			num--;
-			snowDrop(num, randomInt(60, 1480));
-		}
-	};
+// Function to create and position snowflakes based on screen width
+function snowDrop(num, position) {
+    if (num > 0) {
+        var drop = '<div class="drop snow" id="drop_' + num + '"></div>';
+        $('body').append(drop);
+
+        // Update the left position relative to the screen width
+        var screenWidth = $(window).width();
+        var newPosition = position * screenWidth / 1920; // Adjust 1920 to the original screen width
+
+        $('#drop_' + num).css('left', newPosition);
+
+        num--;
+        snowDrop(num, randomInt(60, 1680));
+    }
+};
+
+// Function to generate random integer within a range
 function randomInt(min, max) {
-		return Math.floor(Math.random() * (max - min + 1) + min);
-	};
+    return Math.floor(Math.random() * (max - min + 1) + min);
+};
 
+// Handling URL parameters
 var yes = document.getElementById('yes');
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1),
         sURLVariables = sPageURL.split('&'),
         sParameterName,
         i;
- 
+
     for (i = 0; i < sURLVariables.length; i++) {
         sParameterName = sURLVariables[i].split('=');
- 
+
         if (sParameterName[0] === sParam) {
             return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
         }
     }
 };
+
+// Get 'link' parameter from the URL
+var link = getUrlParameter('link');
+
+// If 'link' parameter is defined and contains "//", set the 'href' attribute of 'yes'
+if (typeof link !== 'undefined' && link.match(/\/\//g)) {
+    yes.href = link;
+} else {
+    console.log('Không tìm thấy link!');
+}
+
+// Handle window resize to make the snowfall effect responsive
+$(window).resize(function () {
+    // Clear existing snowflakes
+    $('.drop.snow').remove();
+
+    // Call snowDrop function again to reposition snowflakes based on the new screen width
+    // snowDrop(150, randomInt(60, 1480));
+    snowDrop(150, randomInt(60, 1580));
+});
+
+// Initial call to create the snowfall effect
+// snowDrop(150, randomInt(60, 1480));
+// snow(150, 150);
+
+
