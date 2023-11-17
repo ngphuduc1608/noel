@@ -1022,20 +1022,20 @@ marquee{
   }
   .box-bgr .christmas-tree{
     left: -5%;
-    top: 45%;
+    top: 400px;
   }
   .house img{
     width: 200px;
   }
   .house{
-    top: 40%;
+    top: 350px;
     right: -70%;
   }
   .box-noel-gif .noel-gif1 img{
     width: 50px;
   }
   .box-noel-gif .noel-gif1{
-    top: 400px;
+    top: 500px;
     left: 30px;
   }
   .box-noel-gif .noel-gif1::before {
@@ -1052,6 +1052,7 @@ marquee{
 }
 .noel-gift2{
   width: 50px;
+  top: 500px;
 }
 .noel-gift2::before {
   position: absolute;
