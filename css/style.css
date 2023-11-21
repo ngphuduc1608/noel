@@ -9,6 +9,9 @@
   background-repeat: no-repeat;
   /* 3. Đổi ảnh nền tại đây */
   background-image: url(../img/bgr2.jpg); 
+  /* background-image: url(../img/background.jpg);  */
+  /* background-image: url(https://i.pinimg.com/originals/bf/36/e7/bf36e787909f6030cb1c0ece02ffcf3e.jpg);  */
+  
   /* background-color: #F24236; */
   background-size: cover;
   background-position: 50%;
@@ -159,12 +162,12 @@ h4 {
 .box-bgr .christmas-tree{
   position: absolute;
   width: 100%;
-  top: 35%;
-  left: 1%;
+  top: 25%;
+  left: 10%;
 }
 .box-bgr .christmas-tree img{
   position: absolute;
-  width: 500px;
+  width: 300px;
   /* top: 50%; */
 }
 .box-text-noel{
@@ -273,6 +276,8 @@ h4 {
   position: absolute;
   width: 450px;
 }
+
+
 section{
   position: absolute;
   width: 100%;
@@ -886,10 +891,15 @@ section{
 }
 .bell{
   position: absolute;
-  top: -10px;
-  left: -20px;
+  top: 400px;
+  left: 200px;
   z-index: 1000;
+  width: 150px;
+  height: 135px;
 }
+/* .bell img{
+  width: 450px;
+} */
 .bell img{
   width: 80px;
 }
@@ -915,8 +925,13 @@ section{
 .snowman{
   position: absolute;
   transform: scaleX(-1);
-  left: 25px;
   bottom: 20px;
+  width: 150px;
+  height: 135px;
+  top: 400px;
+  right: 420px;
+  display: flex;
+  justify-content: center;
   animation: snowman 2s linear infinite;
 }
 @keyframes snowman{
@@ -946,11 +961,11 @@ section{
   background: rgb(0, 0, 0);
   left: 50%;
   transform: translateX(-50%);
-  bottom: 13px;
+  bottom: 11px;
   z-index: -1;
 }
 .snowman img{
-  width: 100px;
+  width: 110px;
 }
 marquee{
   position: absolute;
@@ -1018,11 +1033,11 @@ marquee{
     right: 0;
   }
   .box-bgr .christmas-tree img {
-    width: 250px;
+    width: 150px;
   }
   .box-bgr .christmas-tree{
-    left: -5%;
-    top: 400px;
+    left: 5%;
+    top: 350px;
   }
   .house img{
     width: 200px;
@@ -1030,6 +1045,25 @@ marquee{
   .house{
     top: 350px;
     right: -70%;
+  }
+  .snowman{
+    top: 500px;
+    right: 30px;
+    /* width: 50px; */
+    height: 50px;
+  }
+  .snowman::before{
+    position: absolute;
+  content: '';
+  width: 35px;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 11px;
+  z-index: -1;
+  }
+  .snowman img{
+    width: 50px;
   }
   .box-noel-gif .noel-gif1 img{
     width: 50px;
@@ -1073,9 +1107,26 @@ marquee{
   top: -45px;
 }
 .santa1{
-  width: 200px;
+  width: 100px;
+  /* transform: translate(-50%, 100px); */
+  position: absolute;
+  /* transform: translate(-50%, -50%); */
+  transform: translate(-50%, 400px);
+  animation: santa1 4s linear infinite;
+  animation-delay: 10s;
 }
 .santa1 .image-santa-hand{
-  width: 200px;
+  width: 100px;
+}
+@keyframes santa1{
+  0%{
+      transform: translate(-50%, 400px);
+  }
+  20%,80%{
+      transform: translate(-50%, 200px);
+  }
+  95%,100%{
+      transform: translate(-50%, 400px);
+  }
 }
 }
