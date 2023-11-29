@@ -2,7 +2,7 @@
 const CONFIG = {
     introTitle: ' Hee loo ! 💗',
     introDesc: `Chúc cậu có một mùa giáng sinh an lành và ấm áp bên người thân và bạn bè!!!`,
-    btnIntro: 'Okii 💗',
+    btnIntro: 'Tớ cảm ơn 💗',
     title: 'Noel này cậu đi chơi với tớ nhé ^^ ',
     desc: 'Merry Christmas',
     btnYes: 'Okii , nhớ đón tớ nhé 🥰',
